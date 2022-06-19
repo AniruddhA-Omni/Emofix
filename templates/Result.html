@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../static/css/waffle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div class="home">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <img src="../static/images/LOGO1.png" alt="" width="150" height="150">
+            <label class="logo">EmoFix</label>
+
+            <ul>
+
+                <li><a class="navlinks" href="/templates/description.html">Description</a></li>
+                <li><a class="navlinks" href="/templates/form.html">Predict</a></li>
+                <li><a class="navlinks" href="/templates/activity.html">Health</a></li>
+                <li><a class="navlinks" href="/templates/about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="text-block">
+            <h1> Prediction Results: </h1>
+            <br>
+            <h1>Hi {{name}} <br> Your result is {{data}}</h1>
+
+            {%if data == 0%}
+            <h1>I have a Great news!!!! <br>Your Mental Health is in good condition.</h1>
+
+
+            {%else%}
+            <h1>Your Mental Health is not in good condition</h1>
+            <p class="abtsubhead">Here are some health tips:</p>
+            <p class="abtsubsubhead"><b>1.{{ Hsol1}}</b></p>
+            <p class="abtpb">{{solution1}}</p>
+            <p class="abtsubsubhead"><b>2.{{ Hsol2}}</b></p>
+            <p class="abtpb">{{solution2}}</p>
+            <p class="abtsubsubhead"><b>3.{{ Hsol3}}</b></p>
+            <p class="abtpb">{{solution3}}</p>
+            <p class="abtsubsubhead"><b>4.{{ Hsol4}}</b></p>
+            <p class="abtpb">{{solution4}}</p>
+            <p class="abtsubsubhead"><b>5.{{ Hsol5}}</b></p>
+            <p class="abtpb">{{solution5}}</p>
+            <p class="abtsubsubhead"><b>6.{{ Hsol6}}</b></p>
+            <p class="abtpb">{{solution6}}</p>
+            <p class="abtsubsubhead"><b>7.{{ Hsol7}}</b></p>
+            <p class="abtpb">{{solution7}}</p>
+            <p class="abtsubsubhead"><b>8.{{ Hsol8}}</b></p>
+            <p class="abtpb">{{solution8}}</p>
+            
+            
+
+
+            {%endif%}
+
+            <style>
+                body {
+                    font-family: 'Montserrat', sans-serif;
+                }
+            </style>
+
+            <br>
+
+        </div>
+
+        <button class="button-9" role="button"><a style="text-decoration: none; color: white" href="/">Go to Home
+                Page</a></button>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="foot result">
+        &copy EmoFix 2022
+    </div>
+</body>
+
+</html>
